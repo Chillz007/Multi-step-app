@@ -1,0 +1,27 @@
+@https: //fonts.google.com/specimen/Ubuntu
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu" sans-serif;
+  background-color: hsl(217, 100%, 97%);
+}
+
+.steps {
+  width: 40%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 7px;
+  padding: 25px 40px;
+  margin: 50px auto;
+}
+
+.myBackground {
+  background-image: url("./assets/bg-sidebar-desktop.svg");
+  background-size: contain;
+  /* height: 100vh; */
+  background-repeat: no-repeat;
+}
