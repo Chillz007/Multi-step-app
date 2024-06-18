@@ -1,70 +1,92 @@
 import React from "react";
+import styled from "styled-components";
+import bgImage from "../assets/bg-sidebar-desktop.svg";
 
 export default function Step() {
+  const step = 1;
+
   return (
-    <div>
+    <LeftContainer>
       <div
         style={{
-          display: "flex",
-          alignItems: "center",
+          width: "100%",
+          margin: "0 auto",
+          justifyContent: "center",
         }}
       >
-        <div style={{ margin: "0 auto" }}>
-          <h6>1</h6>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            margin: "10px 0",
+            gap: "8px",
+          }}
+        >
+          <Number>1</Number>
+          <div>
+            <Subtitle>STEP 1</Subtitle>
+            <Text>YOUR INFO</Text>
+          </div>
         </div>
 
-        <div>
-          <h6 style={{ margin: "0" }}>STEP 1</h6>
-          <h6 style={{ margin: "0" }}>YOUR INFO</h6>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "5px",
+            margin: "10px 0",
+          }}
+        >
+          <div>
+            <Number>2</Number>
+          </div>
+          <div>
+            <Subtitle>STEP 2</Subtitle>
+            <Text>SELECT PLAN</Text>
+          </div>
+        </div>
+
+        <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+          <div>
+            <Number>3</Number>
+          </div>
+          <div>
+            <Subtitle>STEP 3</Subtitle>
+            <Text>ADD ONS</Text>
+          </div>
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <div style={{ margin: "0 auto" }}>
-          <h6>2</h6>
-        </div>
-
-        <div>
-          <h6 style={{ margin: "0" }}>STEP 2</h6>
-          <h6 style={{ margin: "0" }}>SELECT PLAN</h6>
-        </div>
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <div style={{ margin: "0 auto" }}>
-          <h6>3</h6>
-        </div>
-
-        <div>
-          <h6 style={{ margin: "0" }}>STEP 3</h6>
-          <h6 style={{ margin: "0" }}>ADD-ONS</h6>
-        </div>
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <div style={{ margin: "0 auto" }}>
-          <h6>4</h6>
-        </div>
-
-        <div>
-          <h6 style={{ margin: "0" }}>STEP 4</h6>
-          <h6 style={{ margin: "0" }}>SUMMARY</h6>
-        </div>
-      </div>
-    </div>
+    </LeftContainer>
   );
 }
+
+const LeftContainer = styled.div`
+  background: url(${bgImage});
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 25%;
+  justify-content: center;
+  padding: 30px;
+`;
+
+const Number = styled.div`
+  height: 20px;
+  aspect-ratio: 1;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+  /* padding: 10px; */
+`;
+
+const Subtitle = styled.h6`
+  color: #aaa8a8;
+`;
+
+const Text = styled.h6`
+  color: white;
+`;

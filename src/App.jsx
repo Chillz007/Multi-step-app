@@ -1,16 +1,16 @@
 import React from "react";
+import styled from "styled-components";
 import Step from "./components/Step";
-import PersonalInfo from "./components/PersonalInfo";
+import Card from "./components/Card";
 
 export default function App() {
   return (
-    <div className="steps">
-      <div className="myBackground">
-        <div>
-          <Step />
-        </div>
-      </div>
-      <PersonalInfo />
+    <div
+      style={{
+        width: "100%",
+      }}
+    >
+      <Card />
     </div>
   );
 }
