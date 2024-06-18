@@ -52,7 +52,25 @@ export default function Step() {
           </div>
           <div>
             <Subtitle>STEP 3</Subtitle>
-            <Text>ADD ONS</Text>
+            <Text>ADD-ONS</Text>
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "5px",
+            marginTop: "30px",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <div>
+            <Number>4</Number>
+          </div>
+          <div>
+            <Subtitle>STEP 4</Subtitle>
+            <Text>SUMMARY</Text>
           </div>
         </div>
       </div>
@@ -65,7 +83,7 @@ const LeftContainer = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  width: 25%;
+  width: 30%;
   justify-content: center;
   padding: 30px;
 `;

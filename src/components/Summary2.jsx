@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Summary() {
+export default function Summary2() {
   return (
     <div>
       <div>
@@ -22,7 +22,7 @@ export default function Summary() {
             }}
           >
             <div>
-              <h4>Arcade (Monthly)</h4>
+              <h4>Arcade (Yearly)</h4>
               <p>Change</p>
             </div>
             <h4>$90/mo</h4>
@@ -36,7 +36,7 @@ export default function Summary() {
             }}
           >
             <p>Online service</p>
-            <p>+$1/mo</p>
+            <p>+$10/mo</p>
           </div>
           <div
             style={{
@@ -46,7 +46,7 @@ export default function Summary() {
             }}
           >
             <p>Larger storage</p>
-            <p>+$2/mo</p>
+            <p>+$20/mo</p>
           </div>
         </div>
         <div
@@ -57,7 +57,7 @@ export default function Summary() {
           }}
         >
           <p>Total(per month)</p>
-          <h3>+$12/mo</h3>
+          <h3>+$120/mo</h3>
         </div>
       </div>
     </div>
