@@ -7,8 +7,10 @@ import AddOns from "./AddOns";
 import Summary from "./Summary";
 import Summary2 from "./Summary2";
 import Thankyou from "./Thankyou";
+import Background from "./Background";
 
 const userInfo = [
+  // <Background />,
   <PersonalInfo />,
   <Plan />,
   <AddOns />,
@@ -27,22 +29,28 @@ export default function Card() {
   return (
     <div>
       <Left>
-        <Step />
-        {userInfo[step]}
-        {/* <PersonalInfo /> */}
-        {/* <Plan /> */}
-        {/* <AddOns /> */}
+        <Background />
+        <div>
+          {userInfo[step]}
+          {/* <PersonalInfo /> */}
+          {/* <Plan /> */}
+          {/* <AddOns /> */}
+          <Btn>
+            <div>
+              <Button>Go Back</Button>
+            </div>
+            <div>
+              <Button>Next</Button>
+            </div>
+          </Btn>
+        </div>
       </Left>
-      <BtnWrapper>
-        <Button onClick={handleNext}>Next</Button>
-        <Button onClick={handleNext}>Go Back</Button>
-      </BtnWrapper>
     </div>
   );
 }
 
 const Left = styled.div`
-  width: 60%;
+  width: 70%;
   background-color: hsl(0, 0%, 100%);
   margin: 0 auto;
   height: 100%;
@@ -52,17 +60,15 @@ const Left = styled.div`
   border-radius: 8px;
 `;
 
-const BtnWrapper = styled.div`
-  display: block;
+const Btn = styled.div`
+  width: 97%;
+  display: flex;
   justify-content: space-between;
-  width: 50%;
-  margin: 10px;
-  border: 1px solid red;
-  /* margin-top: 500px; */
-  /* margin-left: 0; */
+
+  margin: 20px;
 `;
 
 const Button = styled.button`
-  margin: 0 auto;
   width: 100%;
+  padding: 5px 15px;
 `;

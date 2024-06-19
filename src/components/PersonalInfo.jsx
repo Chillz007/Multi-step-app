@@ -3,11 +3,11 @@ import React from "react";
 export default function PersonalInfo() {
   return (
     <div>
-      <div style={{ width: "100%", paddingTop: "8px", margin: "" }}>
+      <div style={{ width: "100%", paddingTop: "10px", margin: "15px" }}>
         <h3>Personal Info</h3>
         <p>Please provide your name, email address and phone number.</p>
 
-        <form style={{ display: "block", margin: "15px 0" }}>
+        <form style={{ display: "block", margin: "25px 0", gap: "20px" }}>
           <label>Name</label>
           <div>
             <input type="text" />
@@ -19,20 +19,6 @@ export default function PersonalInfo() {
           <label>Phone Number</label>
           <div>
             <input type="phone number" />
-          </div>
-          <div style={{ marginTop: "50px", marginLeft: "280px" }}>
-            <button
-              style={{
-                background: "#483EFF",
-                color: "white",
-                border: "none",
-                padding: "8px 18px",
-                borderRadius: "8px",
-                fontSize: "13px",
-              }}
-            >
-              Next Step
-            </button>
           </div>
         </form>
       </div>

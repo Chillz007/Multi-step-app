@@ -3,10 +3,10 @@ import Arcade from "../assets/icon-arcade.svg";
 import Pro from "../assets/icon-pro.svg";
 
 export const StepInfo = [
-  { id: 1, name: "STEP 1", info: "YOUR INFO" },
-  { id: 2, name: "STEP 2", info: "SELECT PLAN" },
-  { id: 3, name: "STEP 3", info: "ADD-ONS" },
-  { id: 4, name: "STEP 4", info: "SUMMARY" },
+  { id: 1, num: "1", name: "Step 1", info: "Your Info" },
+  { id: 2, num: "2", name: "Step 2", info: "Select plan" },
+  { id: 3, num: "3", name: "Step 3", info: "Add-ons" },
+  { id: 4, num: "4", name: "Step 4", info: "Summary" },
 ];
 
 export const Plans = [
