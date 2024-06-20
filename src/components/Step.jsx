@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import bgImage from "../assets/bg-sidebar-desktop.svg";
 import { StepInfo } from "../constant/data";
 
 export default function Step() {
-  const step = 1;
+  const [selectedId, setSelectedId] = useState(0);
 
+  const handleClick = (stepId) => {
+    setSelectedId(stepId === selectedId ? null : stepId);
+    console.log(stepId);
+  };
   return (
     <div>
       {StepInfo.map((step) => {
         return (
           <Container key={step.id}>
-            <Num>{step.num}</Num>
+            <Num onClick={() => handleClick(stepId)}>{step.num}</Num>
             <div>
               <Title>{step.name}</Title>
               <Subtitle>{step.info}</Subtitle>
@@ -44,9 +48,8 @@ const Title = styled.h6`
   font-style: normal;
 `;
 
-const Num = styled.h6`
+const Num = styled.div`
   border: 1px solid white;
-  color: white;
-  border-radius: 50%;
-  padding: 5px 10px;
+  border-radius: 70%;
+  padding: 5px 13px;
 `;

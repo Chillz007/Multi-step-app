@@ -10,7 +10,6 @@ import Thankyou from "./Thankyou";
 import Background from "./Background";
 
 const userInfo = [
-  // <Background />,
   <PersonalInfo />,
   <Plan />,
   <AddOns />,
@@ -23,11 +22,16 @@ export default function Card() {
   const [step, setStep] = useState(0);
 
   const handleNext = () => {
-    setStep((step) => step + 1);
+    if (step < userInfo.length - 1) {
+      return setStep((step) => step + 1);
+    }
   };
+  console.log(step);
 
   const handleBack = () => {
-    setStep((step) => step - 1);
+    if (step > 0) {
+      return setStep((step) => step - 1);
+    }
   };
 
   return (
@@ -41,10 +45,20 @@ export default function Card() {
           {/* <AddOns /> */}
           <Btn>
             <div>
-              <Button onClick={() => handleBack(0)}>Go Back</Button>
+              <Button
+                onClick={() => handleBack(0)}
+                className={step === 0 && step <= 4 ? "hide" : ""}
+              >
+                Go Back
+              </Button>
             </div>
             <div>
-              <Button onClick={() => handleNext(1)}>Next Step</Button>
+              <Button
+                onClick={() => handleNext(1)}
+                className={step >= 5 ? "hide" : ""}
+              >
+                Next Step
+              </Button>
             </div>
           </Btn>
         </div>
@@ -54,7 +68,7 @@ export default function Card() {
 }
 
 const Left = styled.div`
-  width: 70%;
+  width: 60%;
   background-color: hsl(0, 0%, 100%);
   margin: 0 auto;
   height: 100%;
