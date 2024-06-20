@@ -26,6 +26,10 @@ export default function Card() {
     setStep((step) => step + 1);
   };
 
+  const handleBack = () => {
+    setStep((step) => step - 1);
+  };
+
   return (
     <div>
       <Left>
@@ -37,10 +41,10 @@ export default function Card() {
           {/* <AddOns /> */}
           <Btn>
             <div>
-              <Button>Go Back</Button>
+              <Button onClick={() => handleBack(0)}>Go Back</Button>
             </div>
             <div>
-              <Button>Next</Button>
+              <Button onClick={() => handleNext(1)}>Next Step</Button>
             </div>
           </Btn>
         </div>
@@ -61,14 +65,25 @@ const Left = styled.div`
 `;
 
 const Btn = styled.div`
-  width: 97%;
+  width: 80%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-
-  margin: 20px;
+  font-family: "Ubuntu";
+  margin: 0 auto;
 `;
 
 const Button = styled.button`
   width: 100%;
   padding: 5px 15px;
+  margin-left: 7px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: small;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  border: 1px solid #1c11f7;
+  background-color: #1c11f7;
+  color: white;
+  border-radius: 8px;
 `;

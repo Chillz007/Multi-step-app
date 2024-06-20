@@ -5,9 +5,9 @@ import styled from "styled-components";
 
 export default function AddOns() {
   return (
-    <div>
-      <div>
-        <h3 style={{ paddingTop: "30px" }}>Pick adds-ons</h3>
+    <>
+      <Wrapper>
+        <h3>Pick adds-ons</h3>
         <p>Adds-ons help enhance your gaming experience.</p>
 
         <ListContainer>
@@ -15,13 +15,22 @@ export default function AddOns() {
             return <PickList list={pick} key={pick.id} />;
           })}
         </ListContainer>
-      </div>
-    </div>
+      </Wrapper>
+    </>
   );
 }
 
+const Wrapper = styled.div`
+  width: 100%;
+  margin: 0 80px;
+  margin-left: 0;
+  margin-top: 20px;
+`;
+
 const ListContainer = styled.ul`
   list-style: none;
-  border: 1px solid pink;
-  padding: 0;
+
+  margin: 20px auto;
+  padding: 5px 0;
+  width: 100%;
 `;

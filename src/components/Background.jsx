@@ -16,7 +16,7 @@ const LeftContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 25%;
+  width: 30%;
   justify-content: center;
   border-radius: 8px;
 `;

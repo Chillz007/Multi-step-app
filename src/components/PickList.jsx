@@ -8,12 +8,12 @@ export default function PickList({ list }) {
         <div style={{ padding: "5px 0" }}>
           <input
             type="checkbox"
-            style={{ height: "5em", width: "100%", margin: "0", padding: "0" }}
+            style={{ width: "100%", margin: "0", padding: "0" }}
           />
         </div>
         <li>
-          <h3>{list.title}</h3>
-          <p>{list.subtext}</p>
+          <h4>{list.title}</h4>
+          <Subtext>{list.subtext}</Subtext>
         </li>
         <p>{list.price}</p>
       </ListWrapper>
@@ -24,10 +24,17 @@ export default function PickList({ list }) {
 const ListWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 10px;
   justify-content: space-between;
   border-radius: 8px;
   border: 1px solid gray;
-  margin: 15px 0;
+  padding: 10px 15px;
+  margin: 10px 0;
   background-color: hsl(217, 100%, 97%);
+`;
+
+const Subtext = styled.h5`
+  font-weight: 300;
+  font-style: normal;
+  color: gray;
 `;

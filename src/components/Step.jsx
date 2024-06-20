@@ -11,10 +11,10 @@ export default function Step() {
       {StepInfo.map((step) => {
         return (
           <Container key={step.id}>
-            <h6>{step.num}</h6>
+            <Num>{step.num}</Num>
             <div>
-              <h6>{step.name}</h6>
-              <h6>{step.info}</h6>
+              <Title>{step.name}</Title>
+              <Subtitle>{step.info}</Subtitle>
             </div>
           </Container>
         );
@@ -27,12 +27,26 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-  margin: 10px 0;
+  margin: 20px 0;
   margin-left: 20px;
 `;
 
-const Number = styled.div``;
-
 const Subtitle = styled.h6`
+  color: white;
+  text-transform: uppercase;
+`;
+
+const Title = styled.h6`
   color: #aaa8a8;
+  text-transform: uppercase;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-style: normal;
+`;
+
+const Num = styled.h6`
+  border: 1px solid white;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
 `;

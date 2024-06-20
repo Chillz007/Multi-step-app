@@ -16,12 +16,12 @@ const ItemHolder = styled.li`
   border: 1px solid hsl(213, 96%, 18%);
   margin: 8px 15px;
   padding: 10px 0;
-  padding-left: 10px;
+  padding-left: 5px;
   padding-right: 50px;
   border-radius: 8px;
   gap: 20px;
 `;
 
 const Title = styled.h4`
-  margin-top: 50px;
+  margin-top: 20px;
 `;

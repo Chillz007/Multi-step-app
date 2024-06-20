@@ -7,7 +7,7 @@ export default function Plan() {
   return (
     <div>
       <div>
-        <h3 style={{}}>Select your plan</h3>
+        <Container>Select your plan</Container>
         <p>You have the option of monthly or yearly billing.</p>
         <Wrapper>
           {Plans.map((plan) => {
@@ -52,6 +52,11 @@ export default function Plan() {
   );
 }
 
+const Container = styled.h3`
+  margin-top: 20px;
+  font-weight: 800;
+`;
+
 const Wrapper = styled.ul`
   display: flex;
   margin: 20px 0;
@@ -65,6 +70,10 @@ const Subscription = styled.div`
   justify-content: space-evenly;
   padding: 8px 0;
   background-color: hsl(217, 100%, 97%);
+  border-bottom: 100px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 50px;
 `;
 
 const Btn = styled.div`
